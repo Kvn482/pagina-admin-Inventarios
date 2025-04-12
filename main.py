@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from EndPoints import usuarios 
+from EndPoints import productos
 
 app = FastAPI()
 origins = ["*"]
@@ -14,3 +15,4 @@ app.add_middleware(
 )
 
 app.include_router(usuarios.router, tags=["Usuarios"])
+app.include_router(productos.router, tags=["Productos"])

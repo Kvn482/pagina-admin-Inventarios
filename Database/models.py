@@ -21,12 +21,12 @@ class Productos(Base):
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String(150))
     descripcion =  Column(String(250))
-    imagen = Column(LargeBinary)
+    imagen = Column(LONGTEXT)
     categorias = Column(String(100))
     subcategorias =  Column(String(150))
     unidadesDeMedida = Column(String(10))
     precio = Column(Float)
-    Stock =  Column(Integer)
+    stock =  Column(Integer)
 
 class Almacen(Base):
     __tablename__ = 'almacen'
