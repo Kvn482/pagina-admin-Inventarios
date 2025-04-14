@@ -66,7 +66,7 @@ def mod_product(productId: int, entrada:page_schemas.Productos,db:session=Depend
 
 
 @router.delete("/eliminar-producto/{productId}",response_model=page_schemas.respuesta)
-def del_user(productId: int,db:session=Depends(get_product)):
+def del_product(productId: int,db:session=Depends(get_product)):
     producto = db.query(page_models.Productos).filter_by(id=productId).first()
     db.delete(producto)
     db.commit()
