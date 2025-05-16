@@ -9,12 +9,13 @@
 <h1>Sistema de Inventarios</h1>
 <nav>
   <ul>
-    <li><a href="/almacen">Almacén</a></li>
-    <li><a href="/productos">Productos</a></li>
+    <li><a routerLink = "/login">Login</a></li>
+    <li><a routerLink="/productos">Productos</a></li>
+    <li><a routerLink="/almacen">Almacen</a></li>
   </ul>
 </nav>
-<button (click)="goToLogin()">
-  <i class="fas fa-user"></i> Login
-</button>
+<main>
+  <router-outlet></router-outlet>
+</main>
 </body>
 </html>
