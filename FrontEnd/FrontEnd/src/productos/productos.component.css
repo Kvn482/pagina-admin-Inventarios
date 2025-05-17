@@ -42,3 +42,17 @@
     .products-container button:hover {
       background-color: #0056b3;
     }
+.regresar-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF; /* Color de fondo */
+  color: white;              /* Color del texto */
+  text-decoration: none;     /* Eliminar subrayado */
+  border-radius: 5px;        /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.regresar-link:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
