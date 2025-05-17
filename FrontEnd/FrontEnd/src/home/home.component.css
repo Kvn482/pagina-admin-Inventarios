@@ -1,0 +1,61 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del navbar */
+.navbar {
+  background-color: #333;
+  padding: 0.5em 1em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos de la lista */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de los elementos de la lista */
+.nav-list li {
+  margin-right: 1.5em;
+}
+
+/* Estilos de los enlaces */
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Efecto al pasar el cursor */
+.nav-list li a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+/* Enlace activo */
+.nav-list li a.active {
+  border-bottom: 2px solid #04AA6D;
+  font-weight: bold;
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+.hero-section {
+  background-image: url('https://www.microtech.es/hubfs/Fotos%20blog/inventario.jpg'); /* Reemplaza con la ruta de tu imagen */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 60px); /* Ajusta 60px al alto real de tu navbar */
+}

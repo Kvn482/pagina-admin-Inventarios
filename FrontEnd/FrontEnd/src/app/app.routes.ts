@@ -6,8 +6,8 @@ import { AlmacenComponent } from '../almacen/almacen.component';
 import { HomeComponent } from '../home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent},
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent},
+  { path: 'home', component: HomeComponent },
   { path: 'productos', component: ProductosComponent },
   { path: 'almacen', component: AlmacenComponent },
 ];
