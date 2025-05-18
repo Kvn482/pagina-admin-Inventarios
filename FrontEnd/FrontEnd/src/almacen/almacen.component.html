@@ -2,13 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Almacen</title>
 </head>
 <body>
 
   <div class="almacen-container">
-    <h2>Productos</h2>
-    <form action="/productos" method="POST">
+<div class="main-container"></div>
+
+  <div class="form-container">
+    <h2>Almacen</h2>
+    <form action="/almacen" method="POST">
       <input type="text" name="codigo" placeholder="Codigo" required>
       <input type="text" name="nombre" placeholder="Nombre" required>
       <input type="text" name="direccion" placeholder="Direccion" required>
@@ -18,8 +21,29 @@
       <input type="text" name="Responsable" placeholder="Responsable" required>
       <button type="submit">Ingresar</button>
     </form>
+
     <a routerLink="/home" class="regresar-link">Regresar</a>
   </div>
 
+  <div class="table-container">
+    <table id="productTable">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Categorías</th>
+        <th>Subcategorías</th>
+        <th>Unidades de Medida</th>
+        <th>Precio</th>
+        <th>Stock</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Las filas se agregarán aquí dinámicamente -->
+    </tbody>
+  </table>
+  </div>
+  </div>
 </body>
 </html>

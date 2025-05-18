@@ -1,58 +1,159 @@
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f3f3f3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+/* Importar la fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-    .almacen-container {
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      width: 300px;
-    }
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
 
-    .almacen-container h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+/* Contenedor principal */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 
-    .almacen-container input[type="text"],
-    .almacen-container input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+/* Formulario */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease-in-out;
+}
 
-    .almacen-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.form-container h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
 
-    .almacen-container button:hover {
-      background-color: #0056b3;
-    }
+.form-container input[type="text"],
+.form-container input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
 .regresar-link {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007BFF; /* Color de fondo */
-  color: white;              /* Color del texto */
-  text-decoration: none;     /* Eliminar subrayado */
-  border-radius: 5px;        /* Bordes redondeados */
-  transition: background-color 0.3s ease;
+  background-color: #6c757d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
 .regresar-link:hover {
-  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  background-color: #5a6268;
+}
+
+/* Tabla */
+.table-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.table-container h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.table-container th,
+.table-container td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table-container th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.table-container tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table-container img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .form-container,
+  .table-container {
+    padding: 20px;
+  }
+
+  .table-container table {
+    min-width: 600px;
+  }
 }
